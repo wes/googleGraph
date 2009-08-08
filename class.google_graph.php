@@ -22,10 +22,11 @@ class graph {
 			$this->areaColors = 'D,4D89F9,0,0,5';
 		}
 	
-		if(!$this->opts['w']){ $this->opts['w'] = 100; }
-		if(!$this->opts['h']){ $this->opts['h'] = 100; }
-		if(!$this->opts['class']){ $this->opts['class'] = 'graph'; }
-		if(!$this->opts['bg']){ $this->opts['bg'] = 'ffffff'; }
+		if(empty($this->opts['w'])){ $this->opts['w'] = 100; }
+		if(empty($this->opts['h'])){ $this->opts['h'] = 100; }
+		if(empty($this->opts['class'])){ $this->opts['class'] = 'graph'; }
+		if(empty($this->opts['bg'])){ $this->opts['bg'] = 'ffffff'; }
+		if(empty($this->labels)){ $this->labels = array(); }
 		
 		$url = array();
 		$url[] = "http://chart.apis.google.com/chart?";
